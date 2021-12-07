@@ -1,0 +1,403 @@
+/*Big tablets to 1200px*/
+/*Media Queries for browsers with a width less or equal to 1140 px*/
+@media only screen and (max-width: 1200px) {
+    .header-text {
+        width: 100%;
+        padding: 0 2%;
+    }
+
+    
+    .social-contact {
+        padding: 0 160px;
+    }
+
+}
+
+/*Ipads in portrait mode -> 768px to 1023px px*/
+/*Media Queries for ipads or browsers with a width less or equal to 1023px px*/
+@media only screen and (max-width: 1023px) { 
+    .header-text {
+        width: 100%;
+        font-size: 80%;
+        padding: 0 2%;
+    }
+
+    .header-boxes {
+        justify-items: flex-start;
+    }
+
+
+    /*
+    .header-content-text {
+        border: 1px solid;
+    }
+    */
+    
+    .header-content-text p {
+        font-size: 80%;
+    }
+
+    .project-details-inv {
+        margin: 0;
+
+
+    }
+
+    .project-display, 
+    .project-display-inv {
+        flex-direction: column-reverse;
+    }
+    
+    .project-details, 
+    .project-details-inv {
+
+        margin-top: 25px;
+        width: 100%;
+    }
+
+    .project-details::after, 
+    .project-details-inv::after {
+        display: block;
+        height: 0.2px;
+        width: 70%;
+        background-color: #3b3b3b;
+        content: "";
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+
+
+    .project-details-inv:last-child {
+        margin-bottom: 5px;
+    }
+
+
+    .project-picture{
+        width: 400px;
+        height: 400px;
+    }
+
+    .social-contact {
+        margin: 0% auto;
+        margin-top: 50px;
+        height: 300px;
+        width: 60%;
+
+        
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .about-text {
+        width: 40%;
+    }
+    
+    .about-text p {
+        width: 100%;
+        font-size: 80%;
+    }
+
+    .about-image {
+        height: 300px;
+    }
+
+    .social-contact {
+        padding: 0 140px;
+    }
+
+    .testimonial-subgroup {
+        width: 45%;
+        margin-bottom: 20px;
+    }
+}
+
+/*Small phones to Small tablets - 480px to 767px px*/
+/*Media Queries for ipads or browsers with a width less or equal to 767px px*/
+@media only screen and (max-width: 767px) {
+
+    .nav-container .nav-img {
+        height: 20px;
+        margin-top: 8px;
+    }
+
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+
+    .header-text {
+        margin-top: 100px;
+    }
+    nav {
+        z-index: 1;
+    }
+
+    .nav-container{
+        background-color: rgb(255, 255, 255);
+    }
+
+    nav .nav-container ul {
+        display: none;
+    }
+
+    .dropdown {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .dropdown-content {
+        top: 55px; 
+    }
+
+    .header-details {
+        /*border: 1px solid ;*/
+        width: 86%;
+        margin: 0 auto;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    
+    .profile-icon {
+        height: 40px;
+        width: 40px;
+    }
+    
+
+    .choice-details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .choice-box {
+        width: 70%;
+        height: 324px;
+        margin-bottom: 30px;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center; /*Not justify contents anymore since items are now on column direction*/
+    }
+
+    .social-contact {
+        margin: 0% auto;
+        margin-top: 50px;
+        height: 300px;
+        width: 60%;
+
+        
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .about-details {
+        flex-direction: column-reverse;
+    }
+
+    
+    .about-image {
+        height: 200px;
+        width: auto;
+        border-radius: 200px;
+    }
+
+    .about-text .text-head {
+        text-align: center;
+    }
+    
+    .about-text {
+        margin-top: 30px;
+        width: 100%;
+    }
+
+    .footer-links {
+        width: 100%;
+        height: 80px;
+    
+        display: flex;
+    }
+    
+
+    .social-links {
+        width: 28%;
+    }
+
+    .social-links a img{
+        width: 30px;
+    }
+
+}
+
+/*Media Queries for small phones from 0 to 500px*/
+@media only screen and (max-width: 500px) { 
+
+    body {
+        overflow: hidden;
+    }
+
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+
+    .dropdown-content {
+        top: 42px; 
+    }
+
+    .nav-container {
+        background-color: rgb(255, 255, 255);
+        height: 50px;
+    }
+
+    .nav-container img {
+        margin-top: 8px;
+        height: 25px;
+    }
+
+    .header-text {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 100px;
+    }
+
+    h1 {
+        font-weight: 280;
+        font-size: 220%;
+        word-spacing: 0px;
+        line-height: 110%;
+        text-align: center;
+    }
+
+    h2, h3 {
+        font-size: 150%;
+    }
+
+    h2:after {
+        height: 2px;
+        background-color: #F9A31A;
+        width: 80px;
+        content: ""; /*Makes it visible*/
+    }
+
+    .header-details {
+        /*border: 1px solid ;*/
+        width: 86%;
+        margin: 0 auto;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    
+    .header-details-content {
+        margin-top: 30px;
+        width: 400px;
+        height: auto;
+    }
+
+    .header-content-text {
+        width: auto;
+    }
+
+    .icon-box {
+        display: none;
+    }
+
+    .header-boxes {
+        display: none;
+    }
+
+    .project-display {
+        margin: 40px auto;
+    }
+    
+    .project-details, 
+    .project-details-inv {
+        width: 124%;
+    }
+
+    .project-details::after, 
+    .project-details-inv::after {
+        display: block;
+        height: 0.2px;
+        width: 70%;
+        background-color: #3b3b3b;
+        content: "";
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+
+
+    .project-details-inv:last-child {
+        margin-bottom: 5px;
+    }
+
+    .details-text {
+        margin: 5px 0;
+    }
+
+    .testimonial-row {
+        margin-top: 35px;
+    
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .testimonial-subgroup {
+        width: 100%;
+        margin: 2px 0px;
+    }
+    
+    .testimonial-subgroup:nth-child(4), 
+    .testimonial-subgroup:nth-child(5), 
+    .testimonial-subgroup:nth-child(6) {
+        display: none;
+    }
+
+    .choice-box {
+        border-radius: 25px;
+        background-color: #fff;
+        width: 100%;
+    }
+
+    .choice-box p {
+        color: grey;
+        font-size: 90%;
+    }
+
+    .about-text .text-head {
+        text-align: center;
+    }
+    
+    .about-text .y3 {
+        font-weight: 500;
+    }
+
+
+    .social-links {
+        display: none;
+    }
+
+    .social-links a img{
+        width: 20px;
+        margin: 0;
+    }
+
+    .section-footer #copy p {
+        font-size: 70%;
+    }
+
+    div #copy {
+        margin: 0;
+        padding: 5px;
+        width: 100%;
+    }
+}
