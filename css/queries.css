@@ -76,6 +76,10 @@
         width: 400px;
         height: 400px;
     }
+    
+    .project-image-box {
+        background-image: none;
+    }
 
     .social-contact {
         margin: 0% auto;
