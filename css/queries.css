@@ -82,6 +82,10 @@
         background-image: none;
     }
 
+    .choice-box p {
+        font-size: 80%;
+    }
+
     .social-contact {
         margin: 0% auto;
         margin-top: 50px;
