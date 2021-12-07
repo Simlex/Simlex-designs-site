@@ -67,6 +67,7 @@
     }
 
 
+
     .project-details-inv:last-child {
         margin-bottom: 5px;
     }
@@ -75,6 +76,10 @@
     .project-picture{
         width: 400px;
         height: 400px;
+    }
+
+    .project-image-box {
+        background-image: none;
     }
 
     .social-contact {
