@@ -24,6 +24,9 @@ html, body {
 section {
     padding: 80px;
 }
+.section-view {
+    height: 100vh;
+}
 
 .btn {
     height: 40px;
@@ -78,16 +81,15 @@ p {
 
 /*----------PARAGRAPHS-----------*/
 
-/*----------HEADER SECTION-----------*/
-
-/*
-header {
-    height: 100vh;
-}
-*/
 
 nav {
     display: block;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 .nav-container {
@@ -96,8 +98,8 @@ nav {
     margin: 0;
     padding-top: 0px;
     padding: 0px 7% 10px 7%;
-    background: rgb(349, 163, 26, 0.2);
-    z-index: 1;
+    /*background: rgb(349, 163, 26, 0.2); */
+    z-index: 1000;
 
     display: flex;
     align-items: center;
@@ -105,14 +107,16 @@ nav {
 }
 
 .nav-container img {
-    height: 30px;
+    height: 14px;
     width: auto;
     float: left;
+    filter: invert(1);
 }
 
 .nav-container ul {
     list-style: none;
     float: left;
+    font-size: 80%;
 
     display: flex;
 }
@@ -129,17 +133,18 @@ nav {
 .nav-container li a {
     text-decoration: none;
     text-transform: uppercase;
-    color: rgb(38, 9, 58, 0.5);
+    color: white;
+    transition: 0.6s;
 }
 
 .nav-container li a.active{
     text-decoration: none;
     text-transform: uppercase;
-    color: #26093A;
-    border-bottom: 2px solid black;
+    color: white;
+    border-bottom: 2px solid white;
 }
 
-.nav-container li a:hover, 
+.nav-container li a:hover:not(.active), 
 .nav-container li a:active {
     color: #26093A;
     border-bottom: 2px solid black;
@@ -148,19 +153,20 @@ nav {
 /*--------------------------------*/
 
 .dropbtn {
-    background-color: #fff;
     color: white;
     padding: 6px;
     width: 40px;
     border-radius: 6px;
     border: none;
     cursor: pointer;
+
+    background-color: #F9A31A;
     display: flex;
+    justify-content: center;
   }
 
   .dropbtn:hover, 
   .dropbtn:focus {
-    background-color: #888888;
     color: #fff;
   }
 
@@ -190,7 +196,7 @@ nav {
   }
 
   .dropdown-content a:hover {
-      background-color: #888;
+      background-color: #F9A31A;
       color: #fff;
   }
 
@@ -201,6 +207,42 @@ nav {
     }
 
 /*--------------------------------*/
+/*----------HEADER SECTION-----------*/
+
+
+header {    
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    color: white;
+    transition: 0.5s;
+}
+
+#home video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.4;
+}
+
+.hero-content {
+    position: relative;
+    margin: 100px;
+}
+
 
 .header-text {
     width: 100%;
@@ -232,6 +274,36 @@ nav {
     justify-content: space-evenly;
 }
 
+.header-details-content a {
+    display: inline-block;
+    color: #111;
+    background-color: #fff;
+    font-size: 0.7em;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.header-details-content a {
+    display: inline-block;
+    color: #111;
+    background-color: #fff;
+    font-size: 0.7em;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    letter-spacing: 0px;
+    transition: 0.6s;
+}
+
+.header-details-content a:hover {
+    letter-spacing: 2px;
+    background-color: #F9A31A;
+    color: white;
+}
+
 .icon-box {
     display: inline-block;
     height: 40px;
@@ -251,8 +323,21 @@ nav {
     display: none;
 }
 
-.dropdown img {
-    width: 20px;
+.menu-open {
+    width: 60px;
+    height: 60px;
+    background: url('icons/phone.png');
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center;
+    cursor: pointer;
+}
+
+.menu-open.active {
+    background: url('close.png');
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: center;
 }
 
 .header-icon {
@@ -305,15 +390,10 @@ nav {
 
 .header-details-image {
     float: right;
-    border-radius: 20px;
+    border-radius: 14px;
     margin-bottom: 15px;
     overflow: hidden;
     transition: all 300ms;
-}
-
-.header-details-image:hover {
-    padding: 10;
-    box-shadow: 0px 0px 40px -25px #aaa;
 }
 
 .header-details-image img {
@@ -325,12 +405,14 @@ nav {
 }
 
 .header-details-image img:hover {
-    height: 340px;
+    /* height: 340px; */
+    transform: scale(1.1);
 }
 
 
 .section-projects {
     background-color: #FEEDD1;
+    margin-top: -100px;
 }
 
 .project-header {
@@ -432,6 +514,8 @@ nav {
     border-radius: 15px;
     overflow: hidden;
 
+    display: flex;
+    align-items: center;
 }
 
 #image-p {
@@ -473,6 +557,7 @@ nav {
 
 .testimonial-row {
     margin-top: 35px;
+    width: 100%;
 
     display: flex;
     flex-wrap: wrap;
@@ -549,11 +634,12 @@ nav {
 .testimonial-contact p.sub-text {
     font-size: 60%;
     font-weight: 300;
+    color: #F9A31A;
 }
 
-.testimonial-details-group #comments {
-    font-size: 200%;
-    font-weight: 300;
+.testimonial-details-group .comments {
+    font-size: 80%;
+    font-weight: light;
 }
 
 .section-choice {
@@ -648,7 +734,7 @@ nav {
 .about-image {
     height: 400px;
     width: auto;
-    border-radius: 20px;
+    border-radius: 200px;
 }
 
 .section-contact {
