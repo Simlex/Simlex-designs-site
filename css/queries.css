@@ -77,6 +77,10 @@
         width: 400px;
         height: 400px;
     }
+    
+    .project-image-box {
+        background-image: none;
+    }
 
     .project-image-box {
         background-image: none;
@@ -125,7 +129,7 @@
 @media only screen and (max-width: 767px) {
 
     .nav-container .nav-img {
-        height: 20px;
+        height: 14px;
         margin-top: 8px;
     }
 
@@ -137,14 +141,14 @@
 
     .header-text {
         margin-top: 100px;
+        text-align: center;
     }
+
+
     nav {
         z-index: 1;
     }
 
-    .nav-container{
-        background-color: rgb(255, 255, 255);
-    }
 
     nav .nav-container ul {
         display: none;
@@ -159,6 +163,10 @@
         top: 55px; 
     }
 
+    .icon-box {
+        display: none;
+    }
+
     .header-details {
         /*border: 1px solid ;*/
         width: 86%;
@@ -170,10 +178,29 @@
         flex-direction: column-reverse;
         align-items: center;
     }
+
+    .header-content-text {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .header-boxes {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
     
     .profile-icon {
         height: 40px;
         width: 40px;
+    }
+
+    .testimonial-row {
+        width: 100%;
+    }
+
+    .testimonial-subgroup, .comments {
+        font-size: 70%;
     }
     
 
@@ -259,7 +286,6 @@
     }
 
     .nav-container {
-        background-color: rgb(255, 255, 255);
         height: 50px;
     }
 
@@ -268,10 +294,24 @@
         height: 25px;
     }
 
+    header video {
+        object-fit: cover;
+    }
+
+    .header-details-image {
+        height: 150px;
+        width: 150px;
+    }
+
+    .header-details-image img {
+        height: 150px;
+        width: 150px;
+    }
+
     .header-text {
         width: 80%;
         margin: 0 auto;
-        margin-top: 100px;
+        margin-top: 80px;
     }
 
     h1 {
@@ -306,7 +346,7 @@
     }
     
     .header-details-content {
-        margin-top: 30px;
+        margin-top: 0px;
         width: 400px;
         height: auto;
     }
@@ -322,6 +362,8 @@
     .header-boxes {
         display: none;
     }
+
+
 
     .project-display {
         margin: 40px auto;
